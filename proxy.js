@@ -13,8 +13,8 @@ function browseSite() {
         fullUrl = 'https://' + url;
     }
     
-    // Use a CORS proxy service to bypass restrictions
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/' + fullUrl;
+    // Use a different CORS proxy service
+    const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(fullUrl);
     
     frame.style.display = 'block';
     frame.src = proxyUrl;
